@@ -1,0 +1,21 @@
+<div class="container">
+    <div class="row row-cols-1 row-cols-md-3 g-4">
+        <div class="col" *ngFor="let missions of misones">
+          <div class="card h-100">
+            <img src="https://enfoquenoticias.com.mx/wp-content/uploads/2022/03/space.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title"><h1>MISION: </h1>{{missions.mission_name}}</h5>
+              <p class="card-text">ID: {{missions.mission_id}}</p>
+              <p class="card-text">WIKIPEDIA: {{missions.wikipedia}}</p>
+              <p class="card-text">WEBSITE:{{missions.website}}</p>
+              <p class="card-text">TWITER{{missions.twitter}}</p>
+              <p class="card-text">descipcion:{{missions.description}}</p>
+            </div>
+            <div class="card-footer">
+              <small class="text-muted">Last updated 3 mins ago</small>
+            </div>
+          </div>
+        </div>
+        
+      </div>
+</div>

@@ -1,0 +1,50 @@
+
+<div class="container">
+    <div class="row row-cols-1 row-cols-md-3 g-4">
+        <div class="col" *ngFor="let lanzador of lanzamientos">
+          <div class="card h-100">
+            <img src="{{lanzador.links}}" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title"><h1>MISION: </h1>{{lanzador.mission_name}}</h5>
+              <p class="card-text">N vuelo: {{lanzador.flight_number}}</p>
+              <p class="card-text">Año de lanzamiento : {{lanzador.launch_year}}</p>
+              <p class="card-text">Fecha local de lanzamiento:{{lanzador.launch_date_local}}</p>
+              <p class="card-text">Exito: {{lanzador.launch_success}}</p>
+              <p class="card-text">Detalles: {{lanzador.details}}</p>
+              <p class="card-text">Nombre del cohete{{lanzador.rocket_name}}</p>
+              <p class="card-text">Tipo de cohete{{lanzador.rocket_type}}</p>
+              <p class="card-text">wikipedia: {{lanzador.wikipedia}}</p>
+              <p class="card-text">Youtube: {{lanzador.video_link}}</p>
+             
+              <!-- Button trigger modal -->
+<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+    Detalles
+  </button>
+  
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" >
+      <div class="modal-content" >
+        <div class="modal-header" >
+          <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body" >
+            <p class="card-text">Detalles:{{lanzador.details}}</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+            </div>
+            <div class="card-footer">
+              <small class="text-muted">Last updated 3 mins ago</small>
+            </div>
+          </div>
+        </div>
+        
+      </div>
+</div>
